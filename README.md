@@ -1,4 +1,4 @@
-This repo consists of the tools for collecting the Green Dataset: 
+This repo consists of the tools for collecting and parsing the Green Dataset: 
 A Dataset for Mining the Impact of Software Change on Energy Consumption
 
 greenlogger
@@ -8,13 +8,21 @@ meter WattsUp? Pro and also system utilizations from SAR utinity.
 It has been developed by Abram Hindle. If you want to utilize this tool in
 your papers, please cite this work:
 @inproceedings{green-msr,
+
   author    = {Abram Hindle},
+  
   title     = {{Green Mining: A Methodology of Relating Software Change
+  
   to Power Consumption}},
+  
   booktitle = {MSR},
+  
   year      = {2012},
+  
   pages     = {78-87},
+  
   ee        = {http://dx.doi.org/10.1109/MSR.2012.6224303},
+
 }
 
 How to collect data:
@@ -43,3 +51,9 @@ source.
 
 How to parse data:
 In the folder parse-data, demo-usage-shell.sh is for parsing data.
+
+greentrace
+==========
+greentrace is for merging the collected two data sources. It converts the summary of 
+invocation counts for all the system calls to a CSV file then merges it with
+the mean power consumption of multiple software versions.
